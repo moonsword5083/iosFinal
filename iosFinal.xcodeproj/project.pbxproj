@@ -13,6 +13,14 @@
 		3B613601249A4737007AC281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B613600249A4737007AC281 /* Assets.xcassets */; };
 		3B613604249A4737007AC281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B613603249A4737007AC281 /* Preview Assets.xcassets */; };
 		3B613607249A4737007AC281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B613605249A4737007AC281 /* LaunchScreen.storyboard */; };
+		3B61360F249A4762007AC281 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61360E249A4762007AC281 /* Data.swift */; };
+		3B613613249A47C9007AC281 /* BusRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B613612249A47C9007AC281 /* BusRouteRow.swift */; };
+		3B613617249A6108007AC281 /* BusList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B613616249A6108007AC281 /* BusList.swift */; };
+		3B613619249A6130007AC281 /* BusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B613618249A6130007AC281 /* BusData.swift */; };
+		3B61361B249A6477007AC281 /* BusRouteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61361A249A6477007AC281 /* BusRouteData.swift */; };
+		3B61361D249A66B1007AC281 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61361C249A66B1007AC281 /* SearchBar.swift */; };
+		3B61361F249A6ED3007AC281 /* BusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61361E249A6ED3007AC281 /* BusDetail.swift */; };
+		3B613621249A7390007AC281 /* BusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B613620249A7390007AC281 /* BusRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		3B613603249A4737007AC281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B613606249A4737007AC281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B613608249A4737007AC281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B61360E249A4762007AC281 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		3B613612249A47C9007AC281 /* BusRouteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteRow.swift; sourceTree = "<group>"; };
+		3B613616249A6108007AC281 /* BusList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusList.swift; sourceTree = "<group>"; };
+		3B613618249A6130007AC281 /* BusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusData.swift; sourceTree = "<group>"; };
+		3B61361A249A6477007AC281 /* BusRouteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteData.swift; sourceTree = "<group>"; };
+		3B61361C249A66B1007AC281 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		3B61361E249A6ED3007AC281 /* BusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDetail.swift; sourceTree = "<group>"; };
+		3B613620249A7390007AC281 /* BusRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,14 @@
 			isa = PBXGroup;
 			children = (
 				3B6135FA249A4733007AC281 /* AppDelegate.swift */,
+				3B61360E249A4762007AC281 /* Data.swift */,
+				3B613618249A6130007AC281 /* BusData.swift */,
+				3B61361A249A6477007AC281 /* BusRouteData.swift */,
+				3B613612249A47C9007AC281 /* BusRouteRow.swift */,
+				3B613616249A6108007AC281 /* BusList.swift */,
+				3B61361E249A6ED3007AC281 /* BusDetail.swift */,
+				3B613620249A7390007AC281 /* BusRow.swift */,
+				3B61361C249A66B1007AC281 /* SearchBar.swift */,
 				3B6135FC249A4733007AC281 /* SceneDelegate.swift */,
 				3B6135FE249A4733007AC281 /* ContentView.swift */,
 				3B613600249A4737007AC281 /* Assets.xcassets */,
@@ -146,9 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B61361B249A6477007AC281 /* BusRouteData.swift in Sources */,
 				3B6135FB249A4733007AC281 /* AppDelegate.swift in Sources */,
 				3B6135FD249A4733007AC281 /* SceneDelegate.swift in Sources */,
+				3B613621249A7390007AC281 /* BusRow.swift in Sources */,
 				3B6135FF249A4733007AC281 /* ContentView.swift in Sources */,
+				3B613619249A6130007AC281 /* BusData.swift in Sources */,
+				3B61361D249A66B1007AC281 /* SearchBar.swift in Sources */,
+				3B61360F249A4762007AC281 /* Data.swift in Sources */,
+				3B613613249A47C9007AC281 /* BusRouteRow.swift in Sources */,
+				3B613617249A6108007AC281 /* BusList.swift in Sources */,
+				3B61361F249A6ED3007AC281 /* BusDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
