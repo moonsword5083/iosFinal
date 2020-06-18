@@ -15,7 +15,7 @@ struct BusList: View {
     var body: some View {
         NavigationView{
             List(busRouteData.busRoute, rowContent: { (index) in
-                NavigationLink(destination: BusDetail(busRoute: index)) {
+                NavigationLink(destination: BusDetail(busRoute: index, busData: self.busData)) {
                     BusRouteRow(busRoute: index)
                 }
             })

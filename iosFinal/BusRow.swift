@@ -11,7 +11,20 @@ import SwiftUI
 struct BusRow: View {
     var bus: Bus
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            if bus.StopStatus == 0{
+                if(bus.EstimateTime != nil){
+                    if((bus.EstimateTime ?? 0) < 180){
+                        Text("進站中")
+                    }else{
+                        Text("\((bus.EstimateTime ?? 0) / 60)min")
+                    }
+                }
+            }else{
+                Text("未發車")
+            }
+            Text(bus.StopName.Zh_tw)
+        }
     }
 }
 

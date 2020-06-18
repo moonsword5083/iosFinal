@@ -8,6 +8,7 @@
 
 import Foundation
 import CryptoKit
+import Combine
 
 class BusData: ObservableObject {
     @Published var bus = [Bus]()

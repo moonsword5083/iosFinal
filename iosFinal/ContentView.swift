@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var busRouteData = BusRouteData()
+    @ObservedObject var busData = BusData()
     var body: some View {
-        Text("Hello, World!")
+        TabView{
+            BusList(busRouteData: self.busRouteData, busData: self.busData)
+                .tabItem{
+                    Image(systemName: "car")
+                    Text("公車路線")
+            }
+            ImageView()
+                .tabItem{
+                    Image(systemName: "camera")
+                    Text("照片牆")
+            }
+        }
     }
 }
 

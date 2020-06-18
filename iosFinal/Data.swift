@@ -28,4 +28,6 @@ struct StopName: Codable {
 struct BusRoute: Codable ,Identifiable{
     let id = UUID()
     var RouteName: RouteName
+    var DepartureStopNameZh: String
+    var DestinationStopNameZh: String
 }
