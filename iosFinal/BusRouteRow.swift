@@ -26,10 +26,14 @@ struct BusRouteRow: View {
             VStack(alignment: .leading){
                 if lan == "en"{
                     Text(busRoute.RouteName.En)
+                        .font(.headline)
                     Text(busRoute.DepartureStopNameEn + "-" + busRoute.DestinationStopNameEn)
+                        .foregroundColor(Color.gray)
                 }else{
                     Text(busRoute.RouteName.Zh_tw)
+                        .font(.headline)
                     Text(busRoute.DepartureStopNameZh + "-" + busRoute.DestinationStopNameZh)
+                        .foregroundColor(Color.gray)
                 }
             }
             Spacer()
