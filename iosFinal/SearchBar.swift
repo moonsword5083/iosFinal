@@ -15,7 +15,7 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("搜尋公車", text: $text)
+            TextField("搜尋公車路線", text: $text)
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))

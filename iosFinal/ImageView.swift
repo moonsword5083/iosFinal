@@ -11,6 +11,7 @@ import KingfisherSwiftUI
 
 struct ImageView: View {
     @State private var scale: [CGFloat] = [1, 1, 1, 1, 1]
+    @State private var isBig = 0
     var body: some View {
         NavigationView{
             List{
@@ -21,7 +22,14 @@ struct ImageView: View {
                     .clipped()
                     .scaleEffect(scale[0])
                     .onLongPressGesture{
-                        self.scale[0] *= 1.2
+                        if self.isBig == 0{
+                            self.scale[0] *= 1.2
+                            self.isBig = 1
+                        }
+                        else{
+                            self.scale[0] = 1
+                            self.isBig = 0
+                        }
                     }
                     .animation(.easeInOut(duration: 3))
                 KFImage(URL(string: "https://img.nga.178.com/attachments/mon_202005/10/-klbw3Q5-h3fdKvT1kShs-a0.jpg")!)

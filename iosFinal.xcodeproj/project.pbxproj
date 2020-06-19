@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4C9AB8249C592D00AD40C2 /* CollectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C9AB7249C592D00AD40C2 /* CollectData.swift */; };
+		3B4C9ABA249C599500AD40C2 /* CollectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C9AB9249C599500AD40C2 /* CollectList.swift */; };
 		3B60DDA6249B5AA9003920F9 /* KingfisherStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 3B60DDA5249B5AA9003920F9 /* KingfisherStatic */; };
 		3B60DDA8249B5AA9003920F9 /* KingfisherSwiftUIStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 3B60DDA7249B5AA9003920F9 /* KingfisherSwiftUIStatic */; };
 		3B60DDAA249B5AA9003920F9 /* KingfisherDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3B60DDA9249B5AA9003920F9 /* KingfisherDynamic */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B4C9AB7249C592D00AD40C2 /* CollectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectData.swift; sourceTree = "<group>"; };
+		3B4C9AB9249C599500AD40C2 /* CollectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectList.swift; sourceTree = "<group>"; };
 		3B60DDB4249B5C9F003920F9 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		3B6135F7249A4733007AC281 /* iosFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6135FA249A4733007AC281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,10 +109,12 @@
 			children = (
 				3B6135FA249A4733007AC281 /* AppDelegate.swift */,
 				3B61360E249A4762007AC281 /* Data.swift */,
+				3B4C9AB7249C592D00AD40C2 /* CollectData.swift */,
+				3B4C9AB9249C599500AD40C2 /* CollectList.swift */,
+				3B613616249A6108007AC281 /* BusList.swift */,
+				3B613612249A47C9007AC281 /* BusRouteRow.swift */,
 				3B613618249A6130007AC281 /* BusData.swift */,
 				3B61361A249A6477007AC281 /* BusRouteData.swift */,
-				3B613612249A47C9007AC281 /* BusRouteRow.swift */,
-				3B613616249A6108007AC281 /* BusList.swift */,
 				3B61361E249A6ED3007AC281 /* BusDetail.swift */,
 				3B613620249A7390007AC281 /* BusRow.swift */,
 				3B61361C249A66B1007AC281 /* SearchBar.swift */,
@@ -218,6 +224,7 @@
 				3B61361B249A6477007AC281 /* BusRouteData.swift in Sources */,
 				3B6135FB249A4733007AC281 /* AppDelegate.swift in Sources */,
 				3B6135FD249A4733007AC281 /* SceneDelegate.swift in Sources */,
+				3B4C9ABA249C599500AD40C2 /* CollectList.swift in Sources */,
 				3B613621249A7390007AC281 /* BusRow.swift in Sources */,
 				3B6135FF249A4733007AC281 /* ContentView.swift in Sources */,
 				3B613619249A6130007AC281 /* BusData.swift in Sources */,
@@ -225,6 +232,7 @@
 				3B61360F249A4762007AC281 /* Data.swift in Sources */,
 				3B613613249A47C9007AC281 /* BusRouteRow.swift in Sources */,
 				3B613617249A6108007AC281 /* BusList.swift in Sources */,
+				3B4C9AB8249C592D00AD40C2 /* CollectData.swift in Sources */,
 				3B61361F249A6ED3007AC281 /* BusDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
