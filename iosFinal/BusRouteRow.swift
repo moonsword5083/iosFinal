@@ -27,8 +27,8 @@ struct BusRouteRow: View {
                 Text(busRoute.DepartureStopNameZh + "-" + busRoute.DestinationStopNameZh)
             }
             Spacer()
-            if isCollect == 0{
-                if isCollected == 0{
+            if isCollected == 0{
+                if isCollect == 0{
                     Image(systemName: "star")
                     .onTapGesture {
                         self.isCollected = 1
@@ -39,20 +39,16 @@ struct BusRouteRow: View {
                 }else{
                     Image(systemName: "star.fill")
                     .onTapGesture {
-                        self.isCollected = 0
+                        self.isCollected = 1
+                        let index = self.collectData.collects.firstIndex{
+                            $0.RouteName.Zh_tw == self.busRoute.RouteName.Zh_tw
+                        }!
+                        self.collectData.collects.remove(at: index)
                     }
                 }
             }
             else{
-                if isCollected == 1{
-                    Image(systemName: "star")
-                    .onTapGesture {
-                        self.isCollected = 1
-                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh,
-                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh)
-                        self.collectData.collects.insert(tmp, at: 0)
-                    }
-                }else{
+                if isCollect == 1{
                     Image(systemName: "star.fill")
                     .onTapGesture {
                         self.isCollected = 0
@@ -61,10 +57,17 @@ struct BusRouteRow: View {
                         }!
                         self.collectData.collects.remove(at: index)
                     }
+                }else{
+                    Image(systemName: "star")
+                    .onTapGesture {
+                        self.isCollected = 0
+                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh,
+                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh)
+                        self.collectData.collects.insert(tmp, at: 0)
+                    }
                 }
             }
         }
-        
     }
 }
 

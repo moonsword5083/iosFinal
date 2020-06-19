@@ -116,7 +116,7 @@ struct ImageView: View {
                         .resizable()
                         .renderingMode(.original)
                         .scaledToFill()
-                        .frame(width: 300, height: 200)
+                        .frame(width: 350, height: 220)
                         .clipped()
                 }
                 .sheet(isPresented: $showSelectPhoto){

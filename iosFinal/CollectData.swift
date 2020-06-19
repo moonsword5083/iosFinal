@@ -14,23 +14,26 @@ class CollectData: ObservableObject{
     @Published var collects = [BusRoute]()
     
     init(){
-        if let data = UserDefaults.standard.data(forKey: "characters"){
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let url = documentsDirectory.appendingPathComponent("collectBus")
+        
+        if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
-            if let decodedData = try? decoder.decode([BusRoute].self, from: data){
+            if let decodedData = try? decoder.decode([BusRoute].self, from: data) {
                 collects = decodedData
             }
         }
+        
         cancellable = $collects
-            .sink(receiveValue: { (value) in
+            .sink { (value) in
                 let encoder = JSONEncoder()
-                do{
-                    let data = try? encoder.encode(value)
-                    UserDefaults.standard.set(data, forKey: "characters")
-                }
-                catch{
+                do {
+                    let data = try encoder.encode(value)
+                    try? data.write(to: url)
+                } catch {
                     
                 }
-            })
+        }
     }
-    
 }
