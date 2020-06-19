@@ -26,8 +26,8 @@ struct ContentView: View {
             }
             ImageView()
                 .tabItem{
-                    Image(systemName: "camera")
-                    Text("照片牆")
+                    Image(systemName: "list.bullet")
+                    Text("附錄")
             }
         }
     }

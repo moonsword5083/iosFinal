@@ -44,7 +44,7 @@ struct BusRouteRow: View {
                 }
             }
             else{
-                if isCollected == 0{
+                if isCollected == 1{
                     Image(systemName: "star")
                     .onTapGesture {
                         self.isCollected = 1
@@ -56,6 +56,10 @@ struct BusRouteRow: View {
                     Image(systemName: "star.fill")
                     .onTapGesture {
                         self.isCollected = 0
+                        let index = self.collectData.collects.firstIndex{
+                            $0.RouteName.Zh_tw == self.busRoute.RouteName.Zh_tw
+                        }!
+                        self.collectData.collects.remove(at: index)
                     }
                 }
             }
