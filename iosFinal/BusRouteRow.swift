@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BusRouteRow: View {
-    @ObservedObject var collectData = CollectData()
+    @EnvironmentObject var collectData: CollectData
     var busRoute: BusRoute
     var isCollect: Int{
         for nowCollect in collectData.collects.indices{
@@ -20,11 +20,17 @@ struct BusRouteRow: View {
         return 0
     }
     @State private var isCollected = 0
+    var lan = Bundle.main.preferredLocalizations.first
     var body: some View {
         HStack{
             VStack(alignment: .leading){
-                Text(busRoute.RouteName.Zh_tw)
-                Text(busRoute.DepartureStopNameZh + "-" + busRoute.DestinationStopNameZh)
+                if lan == "en"{
+                    Text(busRoute.RouteName.En)
+                    Text(busRoute.DepartureStopNameEn + "-" + busRoute.DestinationStopNameEn)
+                }else{
+                    Text(busRoute.RouteName.Zh_tw)
+                    Text(busRoute.DepartureStopNameZh + "-" + busRoute.DestinationStopNameZh)
+                }
             }
             Spacer()
             if isCollected == 0{
@@ -32,8 +38,8 @@ struct BusRouteRow: View {
                     Image(systemName: "star")
                     .onTapGesture {
                         self.isCollected = 1
-                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh,
-                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh)
+                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh, DepartureStopNameEn: self.busRoute.DepartureStopNameEn,
+                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh, DestinationStopNameEn: self.busRoute.DestinationStopNameEn)
                         self.collectData.collects.insert(tmp, at: 0)
                     }
                 }else{
@@ -61,8 +67,8 @@ struct BusRouteRow: View {
                     Image(systemName: "star")
                     .onTapGesture {
                         self.isCollected = 0
-                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh,
-                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh)
+                        let tmp = BusRoute(RouteName: self.busRoute.RouteName, DepartureStopNameZh: self.busRoute.DepartureStopNameZh, DepartureStopNameEn: self.busRoute.DepartureStopNameEn,
+                                           DestinationStopNameZh: self.busRoute.DestinationStopNameZh, DestinationStopNameEn: self.busRoute.DestinationStopNameEn)
                         self.collectData.collects.insert(tmp, at: 0)
                     }
                 }
@@ -73,6 +79,6 @@ struct BusRouteRow: View {
 
 struct BusRouteRow_Previews: PreviewProvider {
     static var previews: some View {
-        BusRouteRow(collectData: CollectData(), busRoute: BusRoute(RouteName: RouteName(Zh_tw: "104"), DepartureStopNameZh: "a", DestinationStopNameZh: "b"))
+        BusRouteRow(busRoute: BusRoute(RouteName: RouteName(Zh_tw: "104", En: "104"), DepartureStopNameZh: "a", DepartureStopNameEn: "a", DestinationStopNameZh: "b", DestinationStopNameEn: "b"))
     }
 }

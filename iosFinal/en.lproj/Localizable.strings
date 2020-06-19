@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  iosFinal
+
+  Created by User20 on 2020/6/19.
+  Copyright © 2020 ntou. All rights reserved.
+*/
+"基隆公車處資訊" = "Keelung Bus Info";
+"進站中" = "arriving";
+"未發車" = "no bus";
+"搜尋公車路線" = "Search";
+"公車路線" = "BusRoute";
+"收藏公車路線" = "MyFavorite";
+"附錄" = "Appendix";
+"相關影片" = "Video";
+"我的最愛" = "MyFavorite";
+"照片牆" = "Pictures";
+"方向" = "Direction";

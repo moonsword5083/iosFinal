@@ -32,6 +32,10 @@
 		3B61361D249A66B1007AC281 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61361C249A66B1007AC281 /* SearchBar.swift */; };
 		3B61361F249A6ED3007AC281 /* BusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61361E249A6ED3007AC281 /* BusDetail.swift */; };
 		3B613621249A7390007AC281 /* BusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B613620249A7390007AC281 /* BusRow.swift */; };
+		3BF260BD249CF9E2001DA76C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF260BC249CF9E2001DA76C /* WebView.swift */; };
+		3BF260BF249CFA03001DA76C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF260BE249CFA03001DA76C /* VideoView.swift */; };
+		3BF260C2249D010F001DA76C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF260C4249D010F001DA76C /* InfoPlist.strings */; };
+		3BF260C9249D02E1001DA76C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF260CB249D02E1001DA76C /* Localizable.strings */; };
 		8704B9ED249CB75200A2FC88 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704B9EC249CB75200A2FC88 /* ImagePickerController.swift */; };
 		8704B9EF249CC71900A2FC88 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704B9EE249CC71900A2FC88 /* SafariView.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +75,13 @@
 		3B61361C249A66B1007AC281 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3B61361E249A6ED3007AC281 /* BusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDetail.swift; sourceTree = "<group>"; };
 		3B613620249A7390007AC281 /* BusRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRow.swift; sourceTree = "<group>"; };
+		3BF260BC249CF9E2001DA76C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		3BF260BE249CFA03001DA76C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		3BF260C3249D010F001DA76C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BF260C5249D029A001DA76C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3BF260C6249D029A001DA76C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3BF260CA249D02E1001DA76C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BF260CC249D02F2001DA76C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8704B9EC249CB75200A2FC88 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		8704B9EE249CC71900A2FC88 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,25 +122,29 @@
 		3B6135F9249A4733007AC281 /* iosFinal */ = {
 			isa = PBXGroup;
 			children = (
-				3B6135FA249A4733007AC281 /* AppDelegate.swift */,
-				3B61360E249A4762007AC281 /* Data.swift */,
-				3B4C9AB7249C592D00AD40C2 /* CollectData.swift */,
-				3B61361E249A6ED3007AC281 /* BusDetail.swift */,
-				3B613616249A6108007AC281 /* BusList.swift */,
-				3B4C9AB9249C599500AD40C2 /* CollectList.swift */,
-				3B613612249A47C9007AC281 /* BusRouteRow.swift */,
-				3B613618249A6130007AC281 /* BusData.swift */,
-				3B61361A249A6477007AC281 /* BusRouteData.swift */,
 				3B613620249A7390007AC281 /* BusRow.swift */,
-				3B61361C249A66B1007AC281 /* SearchBar.swift */,
+				3B61361E249A6ED3007AC281 /* BusDetail.swift */,
+				3B6135FA249A4733007AC281 /* AppDelegate.swift */,
 				3B6135FC249A4733007AC281 /* SceneDelegate.swift */,
 				3B6135FE249A4733007AC281 /* ContentView.swift */,
+				3B613612249A47C9007AC281 /* BusRouteRow.swift */,
+				3B4C9AB9249C599500AD40C2 /* CollectList.swift */,
+				3B613616249A6108007AC281 /* BusList.swift */,
+				3B61360E249A4762007AC281 /* Data.swift */,
+				3B4C9AB7249C592D00AD40C2 /* CollectData.swift */,
+				3B61361A249A6477007AC281 /* BusRouteData.swift */,
+				3B613618249A6130007AC281 /* BusData.swift */,
+				3B61361C249A66B1007AC281 /* SearchBar.swift */,
+				3B613600249A4737007AC281 /* Assets.xcassets */,
 				3B60DDB4249B5C9F003920F9 /* ImageView.swift */,
 				8704B9EE249CC71900A2FC88 /* SafariView.swift */,
-				3B613600249A4737007AC281 /* Assets.xcassets */,
 				8704B9EC249CB75200A2FC88 /* ImagePickerController.swift */,
+				3BF260BC249CF9E2001DA76C /* WebView.swift */,
+				3BF260BE249CFA03001DA76C /* VideoView.swift */,
 				3B613605249A4737007AC281 /* LaunchScreen.storyboard */,
 				3B613608249A4737007AC281 /* Info.plist */,
+				3BF260C4249D010F001DA76C /* InfoPlist.strings */,
+				3BF260CB249D02E1001DA76C /* Localizable.strings */,
 				3B613602249A4737007AC281 /* Preview Content */,
 			);
 			path = iosFinal;
@@ -194,6 +209,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 3B6135EE249A4733007AC281;
 			packageReferences = (
@@ -213,7 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF260C9249D02E1001DA76C /* Localizable.strings in Resources */,
 				3B613607249A4737007AC281 /* LaunchScreen.storyboard in Resources */,
+				3BF260C2249D010F001DA76C /* InfoPlist.strings in Resources */,
 				3B613604249A4737007AC281 /* Preview Assets.xcassets in Resources */,
 				3B613601249A4737007AC281 /* Assets.xcassets in Resources */,
 			);
@@ -230,9 +248,11 @@
 				3B61361B249A6477007AC281 /* BusRouteData.swift in Sources */,
 				3B6135FB249A4733007AC281 /* AppDelegate.swift in Sources */,
 				3B6135FD249A4733007AC281 /* SceneDelegate.swift in Sources */,
+				3BF260BD249CF9E2001DA76C /* WebView.swift in Sources */,
 				3B4C9ABA249C599500AD40C2 /* CollectList.swift in Sources */,
 				3B613621249A7390007AC281 /* BusRow.swift in Sources */,
 				3B6135FF249A4733007AC281 /* ContentView.swift in Sources */,
+				3BF260BF249CFA03001DA76C /* VideoView.swift in Sources */,
 				3B613619249A6130007AC281 /* BusData.swift in Sources */,
 				3B61361D249A66B1007AC281 /* SearchBar.swift in Sources */,
 				3B61360F249A4762007AC281 /* Data.swift in Sources */,
@@ -252,8 +272,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B613606249A4737007AC281 /* Base */,
+				3BF260C5249D029A001DA76C /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BF260C4249D010F001DA76C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF260C3249D010F001DA76C /* en */,
+				3BF260C6249D029A001DA76C /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3BF260CB249D02E1001DA76C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF260CA249D02E1001DA76C /* en */,
+				3BF260CC249D02F2001DA76C /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -263,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -323,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

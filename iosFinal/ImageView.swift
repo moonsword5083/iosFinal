@@ -123,7 +123,7 @@ struct ImageView: View {
                     ImagePickerController(showSelectPhoto: self.$showSelectPhoto, selectImage: self.$selectImage)
                 }
             }
-            .navigationBarTitle("照片牆")
+            .navigationBarTitle(NSLocalizedString("照片牆", comment: ""))
         }
     }
 }

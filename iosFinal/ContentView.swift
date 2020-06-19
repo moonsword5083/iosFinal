@@ -9,27 +9,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var busRouteData = BusRouteData()
-    @ObservedObject var busData = BusData()
-    @ObservedObject var collectData = CollectData()
+    var busRouteData = BusRouteData()
+    var busData = BusData()
+    var collectData = CollectData()
     var body: some View {
         TabView{
-            BusList(collectData: self.collectData,busRouteData: self.busRouteData, busData: self.busData)
+            BusList()
                 .tabItem{
                     Image(systemName: "car")
-                    Text("公車路線")
+                    Text(NSLocalizedString("公車路線", comment: ""))
             }
-            CollectList(collectData: self.collectData, busData: self.busData)
+            CollectList()
                 .tabItem{
                     Image(systemName: "star")
-                    Text("我的最愛")
+                    Text(NSLocalizedString("我的最愛", comment: ""))
+            }
+            VideoView()
+                .tabItem{
+                    Image(systemName: "video")
+                    Text(NSLocalizedString("相關影片", comment: ""))
             }
             ImageView()
                 .tabItem{
                     Image(systemName: "list.bullet")
-                    Text("附錄")
+                    Text(NSLocalizedString("附錄", comment: ""))
             }
         }
+        .environmentObject(busData)
+        .environmentObject(busRouteData)
+        .environmentObject(collectData)
     }
 }
 

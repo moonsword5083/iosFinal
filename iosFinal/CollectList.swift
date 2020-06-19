@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct CollectList: View {
-    @ObservedObject var collectData = CollectData()
-    @ObservedObject var busData = BusData()
+    @EnvironmentObject var collectData: CollectData
+    @EnvironmentObject var busData: BusData
     @State private var showEditCollect = false
     @State private var showAlert = false
     @State private var searchText = ""
@@ -22,8 +22,8 @@ struct CollectList: View {
             List{
                 SearchBar(text: $searchText)
                 ForEach(filterWords){(collect) in
-                    NavigationLink(destination: BusDetail(busRoute: collect, busData: self.busData)){
-                        BusRouteRow(collectData: self.collectData, busRoute: collect)
+                    NavigationLink(destination: BusDetail(busRoute: collect)){
+                        BusRouteRow(busRoute: collect)
                     }
                 }
                 .onMove { (indexSet, index) in
@@ -35,13 +35,13 @@ struct CollectList: View {
                 }
             }
             .navigationBarItems(leading: EditButton())
-            .navigationBarTitle("收藏公車路線")
+            .navigationBarTitle(NSLocalizedString("收藏公車路線", comment: ""))
         }
     }
 }
 
 struct CollectList_Previews: PreviewProvider {
     static var previews: some View {
-        CollectList(collectData: CollectData())
+        CollectList()
     }
 }

@@ -19,15 +19,19 @@ struct Bus: Codable, Identifiable{
 
 struct RouteName: Codable {
     var Zh_tw: String
+    var En: String
 }
 
 struct StopName: Codable {
     var Zh_tw: String
+    var En: String
 }
 
 struct BusRoute: Codable ,Identifiable{
     let id = UUID()
     var RouteName: RouteName
     var DepartureStopNameZh: String
+    var DepartureStopNameEn: String
     var DestinationStopNameZh: String
+    var DestinationStopNameEn: String
 }
