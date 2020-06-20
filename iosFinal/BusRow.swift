@@ -45,10 +45,10 @@ struct BusRow: View {
             if(bus.EstimateTime != nil && (bus.EstimateTime ?? 0) < 120){
                 if self.lan == "en"{
                     Text(bus.StopName.En)
-                        .font(.largeTitle)
+                        .font(.headline)
                 }else{
                     Text(bus.StopName.Zh_tw)
-                        .font(.largeTitle)
+                        .font(.headline)
                 }
             }else{
                 if self.lan == "en"{
