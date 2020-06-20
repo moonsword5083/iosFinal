@@ -13,16 +13,28 @@ struct BusList: View{
     @EnvironmentObject var busRouteData: BusRouteData
     @EnvironmentObject var busData: BusData
     @State private var searchText = ""
-    var filterWords: [BusRoute] {
+    var lan = Bundle.main.preferredLocalizations.first
+    var filterWordsZh: [BusRoute] {
         return busRouteData.busRoute.filter({searchText.isEmpty ? true : $0.RouteName.Zh_tw.contains(searchText)})
        }
+    var filterWordsEn: [BusRoute] {
+     return busRouteData.busRoute.filter({searchText.isEmpty ? true : $0.RouteName.En.contains(searchText)})
+    }
     var body: some View {
         NavigationView{
             List{
                 SearchBar(text: $searchText)
-                ForEach(filterWords){(route) in
-                    NavigationLink(destination: BusDetail(busRoute: route)){
-                        BusRouteRow(busRoute: route)
+                if self.lan == "en"{
+                    ForEach(filterWordsEn){(route) in
+                        NavigationLink(destination: BusDetail(busRoute: route)){
+                            BusRouteRow(busRoute: route)
+                        }
+                    }
+                }else{
+                    ForEach(filterWordsZh){(route) in
+                        NavigationLink(destination: BusDetail(busRoute: route)){
+                            BusRouteRow(busRoute: route)
+                        }
                     }
                 }
             }
